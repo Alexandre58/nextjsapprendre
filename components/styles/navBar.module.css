@@ -1,0 +1,13 @@
+/*navbar.js*/
+.navbarjs_container {
+    display: flex;
+  
+    justify-content: space-around;
+    flex-wrap: no-wrap;
+    background-color: rgba(164, 127, 79, 0.341);
+    width: 100vw;
+    column-gap: 1.5em;
+   
+   
+   
+  }
