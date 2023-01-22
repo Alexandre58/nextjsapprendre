@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import style from "../components/styles/container.module.css";
 
 const Container = (props) => {
   const router = useRouter();
@@ -15,7 +16,9 @@ const Container = (props) => {
         <Link className="app_link" href={accueil}>
           accueil
         </Link>
-        <button onClick={galleryPicture}>Gallery picture</button>
+        <button className={style.container_button} onClick={galleryPicture}>
+          Gallery picture
+        </button>
 
         <Navbar />
         {props.children}
