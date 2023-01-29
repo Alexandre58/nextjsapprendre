@@ -1,30 +1,32 @@
 import Head from "next/head";
 import Link from "next/link";
-import getStatic from "../function/functionDiverses";
-
+import getStaic1 from "../function/functionGetStatic";
 import styles from "@/styles/Home.module.css";
 import { useEffect, useState } from "react";
 
-export default function Home(getStatic) {
-  console.log(getStatic);
+export default function Home(props) {
+  console.log(props);
   //appel api
   const [state, setState] = useState(false);
   //affichage de l'api sur la page
   useEffect(() => {
     newWord();
   }, []);
-  const newWord = () => {
-    fetch("/api/apiCreate")
+  //fetch de l'url ou ce trouve l'api
+  const newWord = async () => {
+    await fetch("/api/apiCreate")
       .then((response) => response.json())
-      .then((dataEnglish) => setState(dataEnglish));
+      .then((data) => setState(data));
+    console.log(state);
   };
+  console.log("******state de index page******" + state);
   console.log(state);
 
-  //pour que le state fonctionne au hasard des demandes
+  // pour que le state fonctionne au hasard des demandes car l'objet est trop grand pour etre affiché
   // let randomWord;
   // if (state) {
-  //   const array = state.englishList[0].data;
-  //   randomWord = array[Math.floor(Math.random() * array.length)].en;
+  //   const array3 = state.englishList[0].data;
+  //   randomWord = array3[Math.floor(Math.random() * array3.length)].en;
   //   console.log(randomWord);
   // }
   return (
@@ -40,28 +42,24 @@ export default function Home(getStatic) {
           <h1 className="accueil_h1">Accueil</h1>
           <h2 className={styles.accueil_h2}>Veux-tu apprendre l'anglais</h2>
           <h2 className={styles.accueil_h2}>
-            Mot au hassard de la base de donnée fichier pathsvoc.json dans le
+            Mot au hassard de la base de donnée fichier listes.json dans le
             dossier data
           </h2>
           <button onClick={newWord} className={styles.index_button}>
             Get random Words
           </button>
           <h2 className="styles index_h2"></h2>
-
-          {/**      <table className={styles.tableau}>
+          <table className={styles.tableau}>
             <tbody>
-              {getStatic.arrayVocabulary.map((el) => (
+              {props.arrayVocabulary.map((el) => (
                 <tr className={styles.tableau_tr}>
                   <td className={styles.tableau_td}>{el.en}</td>
                   <td className={styles.tableau_td}>{el.fr}</td>
                   <td className={styles.tableau_td}></td>
-                  {el.firstName}
-                  {el.lastName}
                 </tr>
               ))}
             </tbody>
-          </table>}}
-              */}
+          </table>
 
           <p className="accueil_p">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis

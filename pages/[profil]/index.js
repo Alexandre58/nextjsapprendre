@@ -13,7 +13,6 @@ const index = () => {
     "Grace Hopper",
     "Margaret Hamilton",
   ];
-  const locataire = {};
 
   const handleClic = () => {
     console.log("Bonjour de profil");

@@ -8,14 +8,11 @@ const contact = () => {
   );
 };
 // export async function getStaticProps() {
-//   const quote = await fetch(
-//     "https://goquotes-api.herokuapp.com/api/v1/random?count=1"
-//   );
-//   const data2 = quote.json();
+//   const quote = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+//   const data2 = quote;
 //   return {
 //     props: { data2 },
 //   };
 // }
 
 export default contact;
-//https://goquotes-api.herokuapp.com/api/v1/random?count=1

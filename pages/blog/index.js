@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+
 const index = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const index = () => {
       <div>
         <h1 className="index_blog_h1">Le BLOG</h1>
         <Link href={`/blog/1000 plats basque`}>10 plats basque</Link>
+
         <p className="accueil_p">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
           non error sunt eveniet, optio nesciunt facere molestiae minus velit
