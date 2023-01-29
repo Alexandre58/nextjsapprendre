@@ -1,3 +1,41 @@
-.articleavecslug_p {
+
+.description {
+  display: flex;
+  flex-direction: column;
+}.articleavecslug_p {
   color: blue;
+}
+.accueil_h2 {
+  border: 1px solid black;
+  padding: 1em;
+  border-radius: 15px;
+  text-align: center;
+}
+.tableau {
+  margin: 0 auto;
+  font-size: 1.2em;
+  border: solid 2px black;
+}
+.tableau_tr {
+  background-color: rgb(138, 138, 171);
+}
+.tableau_td {
+  padding: 0.5em;
+  text-align: center;
+  min-width: 70%;
+
+}
+.index_button {
+  background-color: rgb(151, 151, 191);
+  border: solid 1px black;
+  cursor: pointer;
+  color: rgb(47, 28, 28);
+  padding: 0.5em;
+  width: 50%;
+  margin: auto;
+  border-radius: 15px;
+
+}
+.index_button:hover {
+  transform: scale(1.1);
 }

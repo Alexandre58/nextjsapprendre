@@ -12,6 +12,8 @@ const Navbar = () => {
         <Link href="/blog/articleavecslug">Article slug</Link>
         <Link href="/blog/articleavecslug/article">Article [...slug]</Link>
         <Link href="/contact">Contact</Link>
+        <Link href="/blog/liste">Liste</Link>
+        <Link href="/profil">Profil</Link>
       </nav>
     </>
   );
